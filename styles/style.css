@@ -108,23 +108,23 @@ h1 a img {
   padding: 35px 30px 35px 40px;
 }
 
-.pc-nav ul {
+.nav-area .nav ul {
   display: flex;
 }
-.pc-nav ul li {
+.nav-area .nav ul li {
   margin-right: 18px;
 }
-.pc-nav ul li a {
+.nav-area .nav ul li a {
   font-size: 1rem;
   position: relative;
   text-transform: uppercase;
   font-weight: 500;
 }
-.pc-nav ul li:last-child {
+.nav-area .nav ul li:last-child {
   margin-right: 0;
 }
 
-.pc-nav ul li a::after {
+.nav-area .nav ul li a::after {
   position: absolute;
   content: "";
   display: block;
@@ -133,13 +133,11 @@ h1 a img {
   background-color: #234926;
   bottom: -7px;
   left: 0;
-  /*幅を0に設定*/
   width: 0;
-  /*アニメーションの速度設定*/
   transition: all 0.5s ease;
 }
 
-.pc-nav ul li a:hover::after {
+.nav-area .nav ul li a:hover::after {
   width: 100%;
 }
 
@@ -172,12 +170,9 @@ h1 a img {
   text-align: center;
 }
 
-/* concept */
 /* news */
 .news-bg {
   background-color: #bfc1be;
-  /* この指定はなくても大丈夫です！ */
-  /* width: 100% */
   padding: 56px 0;
   margin-bottom: 200px;
 }
@@ -232,8 +227,8 @@ h1 a img {
 /* about */
 .about-container {
   display: flex;
-  max-width: 100%;
   justify-content: flex-end;
+  max-width: 100%;
 }
 
 .about-text-container {
@@ -327,7 +322,6 @@ h1 a img {
 .access-map-area h3 {
   font-size: 1.125rem;
   margin-bottom: 16px;
-  line-height: 1.5;
   border-bottom: 2px solid #234926;
   color: #234926;
   display: inline-block;
@@ -366,6 +360,11 @@ h1 a img {
 .contact-container dd {
   width: 80%;
 }
+.contact-container dd textarea {
+  height: 16rem;
+  border: none;
+  margin-bottom: 32px;
+}
 
 input[type=text],
 input[type=email],
@@ -397,12 +396,6 @@ input[type=submit]:hover {
   outline: 1px solid #234926;
 }
 
-.contact-container dd textarea {
-  height: 16rem;
-  border: none;
-  margin-bottom: 32px;
-}
-
 /* ここからfooter */
 .footer-container {
   max-width: 100%;
@@ -410,35 +403,7 @@ input[type=submit]:hover {
   text-align: center;
   background-color: #234926;
   padding: 40px 0 20px;
-}
-
-.footer-nav ul {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 70px;
-}
-.footer-nav ul li {
-  border-left: 1px solid #dfe0df;
-}
-.footer-nav ul li:first-child {
-  border: none;
-}
-
-.footer-nav ul li a {
-  margin: 10px 25px;
-  font-size: 1rem;
-  transition: all 0.5s ease;
-  text-transform: uppercase;
-  color: #dfe0df;
-}
-.footer-nav ul li a:hover {
-  opacity: 0.5;
-  transition: all 0.5s ease;
-}
-
-.footer-container a {
-  text-align: center;
-  display: block;
+  margin: 0 auto;
 }
 
 .footer-logo {
@@ -532,23 +497,76 @@ input[type=submit]:hover {
   .contact-container dd {
     width: 100%;
   }
-  /* footer */
-  .footer-nav ul {
+}
+@media screen and (max-width: 420px) {
+  .header-container {
+    align-items: flex-end;
+  }
+  .nav-area .nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 20, 20, 0.8);
+    display: none;
+    transform: translateX(-300px);
+    transition: all 0.5s;
+  }
+  .nav-area .nav ul {
     flex-direction: column;
     align-items: center;
+    padding: 20%;
   }
-  .footer-nav ul li {
-    border: none;
+  .nav-area .nav ul li {
+    margin-right: 0;
+    margin-bottom: 10px;
   }
-  .footer-nav ul li a {
+  .nav-area .nav ul li a {
+    color: #fff;
     font-size: 1.25rem;
   }
-  .footer-nav ul li:first-child::before {
-    content: "";
+  .nav-area.active nav {
     display: block;
-    width: 300px;
-    height: 4px;
-    background-color: #d0d0db;
-    margin: 10px auto 30px;
+    transform: translateX(0);
+    transition: all 0.5s;
+  }
+  .hamburger-menu {
+    width: 38px;
+    height: 28px;
+    background: #bfc1be;
+    border-radius: 5px;
+    position: relative;
+    z-index: 30;
+    cursor: pointer;
+  }
+  .hamburger-menu span {
+    position: absolute;
+    top: 0;
+    left: 4px;
+    width: 30px;
+    height: 3px;
+    border-radius: 5px;
+    background-color: #234926;
+    transition: all 0.5s;
+  }
+  .hamburger-menu span:nth-of-type(1) {
+    top: 4px;
+  }
+  .hamburger-menu span:nth-of-type(2) {
+    top: 12px;
+  }
+  .hamburger-menu span:nth-of-type(3) {
+    top: 20px;
+  }
+  .active .hamburger-menu span:nth-of-type(1) {
+    transform: translateY(8px) rotate(-45deg);
+  }
+  .active .hamburger-menu span:nth-of-type(2) {
+    opacity: 0;
+  }
+  .active .hamburger-menu span:nth-of-type(3) {
+    transform: translateY(-8px) rotate(45deg);
   }
 }/*# sourceMappingURL=style.css.map */

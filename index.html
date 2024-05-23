@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Botanical Garden</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="テキストテキスト" />
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/style.css" />
-    <script src="script.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <!-- header -->
-    <header class="header">
-      <div class="header-container">
-        <h1>
-          <a href="#"><img src="img/header-logo.png" alt="" /></a>
-        </h1>
-        <nav class="pc-nav">
+<head>
+  <meta charset="UTF-8" />
+  <title>Botanical Garden</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="テキストテキスト" />
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="styles/reset.css" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <script src="script.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <!-- header -->
+  <header class="header">
+    <div class="header-container">
+      <h1>
+        <a href="#"><img src="img/header-logo.png" alt="" /></a>
+      </h1>
+      <div class="nav-area">
+        <nav class="nav">
           <ul>
             <li><a href="#news">news</a></li>
             <li><a href="#about">about</a></li>
@@ -33,253 +33,230 @@
             <li><a href="#contact">contact</a></li>
           </ul>
         </nav>
+        <div id="btn" class="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
       </div>
-      <div class="sns-logo">
-        <a href="" target="_blank"><img src="img/Instagram.png" alt="" /></a>
-        <a href="" target="_blank"><img src="img/Facebook.png" alt="" /></a>
-      </div>
-    </header>
+    </div>
 
-    <!-- main -->
-    <main>
-      <div class="main-visual">
-        <picture>
-          <source media="(max-width: 870px)" srcset="img/mainview-mb.png" />
-          <img src="img/mainview.jpeg" alt="画像" />
-        </picture>
-      </div>
+    <div class="sns-logo">
+      <a href="" target="_blank"><img src="img/Instagram.png" alt="" /></a>
+      <a href="" target="_blank"><img src="img/Facebook.png" alt="" /></a>
+    </div>
+  </header>
 
-      <!-- section-concept -->
-       <!-- <section class="concept"> -->
-        <!-- 未定  -->
-        <!-- <h2>
-          「より多くの人に植物を安く提供したい」「身近なお花屋さんでありたい」
-        </h2>
-        <p>
-          「お祝いのギフト」や「お供え・お悔やみの献花」のご相談も承ります。
-        </p>
-      </section> --> 
+  <!-- main -->
+  <main>
+    <div class="main-visual">
+      <picture>
+        <source media="(max-width: 870px)" srcset="img/mainview-mb.png" />
+        <img src="img/mainview.jpeg" alt="画像" />
+      </picture>
+    </div>
 
-      <!-- section-news -->
-      <div class="news-bg">
-        <section id="news" class="news wrapper">
-          <h2 class="ttl news-ttl">news</h2>
 
-          <div class="article-container">
-            <article class="article-inner fade">
-              <div class="topics-time">
-                <p>new post!</p>
-                <time datetime="2024-03-25">03/27</time>
-              </div>
-              <dl class="img-box">
-                <dt><img src="img/vegetables.jpeg" alt="" /></dt>
-                <dd class="topics-text">
-                  本日、なす、トマト、ピーマンの野菜苗が入荷しました!
-                </dd>
-              </dl>
-            </article>
+    <!-- section-news -->
+    <div class="news-bg">
+      <section id="news" class="news wrapper">
+        <h2 class="ttl news-ttl">news</h2>
 
-            <article class="article-inner fade">
-              <div class="topics-time">
-                <p>new post!</p>
-                <time datetime="2024-03-25">03/25</time>
-              </div>
-              <dl class="img-box">
-                <dt><img src="img/cactas.jpeg" alt="" /></dt>
-                <dd class="topics-text">
-                  1ポット、&yen;198のサボテンが入荷しました!
-                </dd>
-              </dl>
-            </article>
-
-            <article class="article-inner fade">
-              <div class="topics-time">
-                <p>new post!</p>
-                <time datetime="2024-03-25">03/25</time>
-              </div>
-              <dl class="img-box">
-                <dt><img src="img/bouquet-2.jpeg" alt="" /></dt>
-                <dd class="topics-text">ユーカリの香るブーケ!作りました!</dd>
-              </dl>
-            </article>
-          </div>
-          <div class="more-btn"><a href="">more</a></div>
-        </section>
-      </div>
-
-      <!-- section-about -->
-      <section id="about" class="about">
-        <h2 class="ttl">about</h2>
-        <div class="about-container">
-          <div class="about-text-container">
-            <h3 class="about-ttl">私たちについて</h3>
-            <p>
-              花は、流通コストがかかります。<br />私たちは、一部の鉢物、苗物を、
-              生産から管理、販売までを一貫して行うことで、低価格でご提供することを実現しました。
-            </p>
-            <p>
-              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-              テキストテキストテキストテキストテキストテキストテキスト
-            </p>
-
-            <div class="more-btn">
-              <a href="">more</a>
+        <div class="article-container">
+          <article class="article-inner fade">
+            <div class="topics-time">
+              <p>new post!</p>
+              <time datetime="2024-03-25">03/27</time>
             </div>
-          </div>
-          <div class="img-container">
-            <img class="fade" src="img/about-us.jpeg" alt="" />
+            <dl class="img-box">
+              <dt><img src="img/vegetables.jpeg" alt="" /></dt>
+              <dd class="topics-text">
+                本日、なす、トマト、ピーマンの野菜苗が入荷しました!
+              </dd>
+            </dl>
+          </article>
+
+          <article class="article-inner fade">
+            <div class="topics-time">
+              <p>new post!</p>
+              <time datetime="2024-03-25">03/25</time>
+            </div>
+            <dl class="img-box">
+              <dt><img src="img/cactas.jpeg" alt="" /></dt>
+              <dd class="topics-text">
+                1ポット、&yen;198のサボテンが入荷しました!
+              </dd>
+            </dl>
+          </article>
+
+          <article class="article-inner fade">
+            <div class="topics-time">
+              <p>new post!</p>
+              <time datetime="2024-03-25">03/25</time>
+            </div>
+            <dl class="img-box">
+              <dt><img src="img/bouquet-2.jpeg" alt="" /></dt>
+              <dd class="topics-text">ユーカリの香るブーケ!作りました!</dd>
+            </dl>
+          </article>
+        </div>
+        <div class="more-btn"><a href="">more</a></div>
+      </section>
+    </div>
+
+    <!-- section-about -->
+    <section id="about" class="about">
+      <h2 class="ttl">about</h2>
+      <div class="about-container">
+        <div class="about-text-container">
+          <h3 class="about-ttl">私たちについて</h3>
+          <p>
+            花は、流通コストがかかります。<br />私たちは、一部の鉢物、苗物を、
+            生産から管理、販売までを一貫して行うことで、低価格でご提供することを実現しました。
+          </p>
+          <p>
+            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            テキストテキストテキストテキストテキストテキストテキスト
+          </p>
+
+          <div class="more-btn">
+            <a href="">more</a>
           </div>
         </div>
-      </section>
-
-      <!-- section-works -->
-      <section id="works" class="works wrapper">
-        <h2 class="ttl">works</h2>
-
-        <ul class="works-img-container">
-          <li>
-            <a href="#" class="fade"
-              ><img src="img/works1.jpg" alt="" />
-              <p>花束</p>
-              <p>&yen;2,000~&yen;50,000</p>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="fade"
-              ><img src="img/works2.jpg" alt="" />
-              <p>アレンジメントフラワー</p>
-              <p>&yen;2,000~&yen;50,000</p>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="fade"
-              ><img src="img/works3.jpg" alt="" />
-              <p>バラ100本!プロポーズ用の花束</p>
-              <p>&yen;60,000~</p>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="fade"
-              ><img src="img/works4.jpg" alt="" />
-              <p>スタンド花</p>
-              <p>&yen;20,000~</p>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="fade"
-              ><img src="img/works5-.jpg" alt="" />
-              <p>お供え・お悔やみの献花</p>
-              <p>&yen;1,000~</p>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="fade"
-              ><img src="img/works6.jpg" alt="" />
-              <p>多肉植物の寄せ植え</p>
-              <p>&yen;1,000~</p>
-            </a>
-          </li>
-        </ul>
-      </section>
-
-      <!-- section-access -->
-      <section id="access" class="access wrapper">
-        <h2 class="ttl ttl-border">access</h2>
-
-        <dl class="access-text-container">
-          <div class="access-text">
-            <dt>店名</dt>
-            <dd>BOTANICAL GARDEN</dd>
-          </div>
-          <div class="access-text">
-            <dt>住所</dt>
-            <dd>愛知県名古屋市中区橘1丁目21-29</dd>
-          </div>
-          <div class="access-text">
-            <dt>TEL/FAX</dt>
-            <dd>555-555-5555</dd>
-          </div>
-          <div class="access-text">
-            <dt>営業時間</dt>
-            <dd>11:00 - 19:00</dd>
-            <dd class="add">水曜定休（祝日の場合は営業）</dd>
-          </div>
-          <div class="access-text">
-            <dt>事業内容</dt>
-            <dd>生花、鉢苗の販売</dd>
-            <dd class="add">鉢苗の生産・管理</dd>
-          </div>
-          <div class="access-text">
-            <dt>アクセス</dt>
-            <dd>名古屋市営地下鉄 名城線 東別院駅下車後、2番出口より徒歩10分</dd>
-            <dd class="add">専用駐車場はありません。</dd>
-          </div>
-        </dl>
-
-        <!-- google-map -->
-        <div class="access-map-area">
-          <h3>access map</h3>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6524.255519698946!2d136.89832987522624!3d35.153434358787784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600377357d156aed%3A0x9ae6b8195dbd8478!2z44CSNDYwLTAwMTYg5oSb55-l55yM5ZCN5Y-k5bGL5biC5Lit5Yy65qmY77yR5LiB55uu77yS77yR4oiS77yS77yZIE4uUy5aZWFs5p2x5Yil6Zmi!5e0!3m2!1sja!2sjp!4v1714702456455!5m2!1sja!2sjp"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+        <div class="img-container">
+          <img class="fade" src="img/about-us.jpeg" alt="" />
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- section-contact -->
-      <section id="contact" class="contact wrapper">
-        <h2 class="ttl ttl-border">contact</h2>
-        <ul class="contact-tel">
-          <li>お急ぎの場合はお電話にて承ります</li>
-          <li>Phone 555-555-5555</li>
-        </ul>
-        <dl class="contact-container">
-          <dt>
-            <label for="name">お名前</label>
-          </dt>
-          <dd>
-            <input type="text" id="name" name="name" autocomplete="given-name" />
-          </dd>
-          <dt>
-            <label for="email">メールアドレス</label>
-          </dt>
-          <dd>
-            <input type="email" id="email" name="e-mail" autocomplete="email"/>
-          </dd>
-          <dt>
-            <label for="message">お問合内容</label>
-          </dt>
-          <dd>
-            <textarea id="message" name="message"></textarea>
-          </dd>
-        </dl>
-        <div class="btn">
-          <input type="submit" value="送信する" />
+    <!-- section-works -->
+    <section id="works" class="works wrapper">
+      <h2 class="ttl">works</h2>
+
+      <ul class="works-img-container">
+        <li>
+          <a href="#" class="fade"><img src="img/works1.jpg" alt="" />
+            <p>花束</p>
+            <p>&yen;2,000~&yen;50,000</p>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="fade"><img src="img/works2.jpg" alt="" />
+            <p>アレンジメントフラワー</p>
+            <p>&yen;2,000~&yen;50,000</p>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="fade"><img src="img/works3.jpg" alt="" />
+            <p>バラ100本!プロポーズ用の花束</p>
+            <p>&yen;60,000~</p>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="fade"><img src="img/works4.jpg" alt="" />
+            <p>スタンド花</p>
+            <p>&yen;20,000~</p>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="fade"><img src="img/works5-.jpg" alt="" />
+            <p>お供え・お悔やみの献花</p>
+            <p>&yen;1,000~</p>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="fade"><img src="img/works6.jpg" alt="" />
+            <p>多肉植物の寄せ植え</p>
+            <p>&yen;1,000~</p>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- section-access -->
+    <section id="access" class="access wrapper">
+      <h2 class="ttl ttl-border">access</h2>
+
+      <dl class="access-text-container">
+        <div class="access-text">
+          <dt>店名</dt>
+          <dd>BOTANICAL GARDEN</dd>
         </div>
-      </section>
-    </main>
-
-    <!-- footer -->
-    <footer class="footer">
-        <div class="footer-container">
-          <a href=""
-            ><img class="footer-logo" src="img/footer-logo.png" alt=""
-          /></a>
-          <nav class="footer-nav">
-            <ul>
-              <li><a href="">news</a></li>
-              <li><a href="">about</a></li>
-              <li><a href="">works</a></li>
-              <li><a href="">access</a></li>
-              <li><a href="">contact</a></li>
-            </ul>
-          </nav>
-          <p class="copyright"><small>&copy;botanical garden</small></p>
+        <div class="access-text">
+          <dt>住所</dt>
+          <dd>愛知県名古屋市中区橘1丁目21-29</dd>
         </div>
-    </footer>
+        <div class="access-text">
+          <dt>TEL/FAX</dt>
+          <dd>555-555-5555</dd>
+        </div>
+        <div class="access-text">
+          <dt>営業時間</dt>
+          <dd>11:00 - 19:00</dd>
+          <dd class="add">水曜定休（祝日の場合は営業）</dd>
+        </div>
+        <div class="access-text">
+          <dt>事業内容</dt>
+          <dd>生花、鉢苗の販売</dd>
+          <dd class="add">鉢苗の生産・管理</dd>
+        </div>
+        <div class="access-text">
+          <dt>アクセス</dt>
+          <dd>名古屋市営地下鉄 名城線 東別院駅下車後、2番出口より徒歩10分</dd>
+          <dd class="add">専用駐車場はありません。</dd>
+        </div>
+      </dl>
 
-  </body>
+      <!-- google-map -->
+      <div class="access-map-area">
+        <h3>access map</h3>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6524.255519698946!2d136.89832987522624!3d35.153434358787784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600377357d156aed%3A0x9ae6b8195dbd8478!2z44CSNDYwLTAwMTYg5oSb55-l55yM5ZCN5Y-k5bGL5biC5Lit5Yy65qmY77yR5LiB55uu77yS77yR4oiS77yS77yZIE4uUy5aZWFs5p2x5Yil6Zmi!5e0!3m2!1sja!2sjp!4v1714702456455!5m2!1sja!2sjp"
+          style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+
+    <!-- section-contact -->
+    <section id="contact" class="contact wrapper">
+      <h2 class="ttl ttl-border">contact</h2>
+      <ul class="contact-tel">
+        <li>お急ぎの場合はお電話にて承ります</li>
+        <li>Phone 555-555-5555</li>
+      </ul>
+      <dl class="contact-container">
+        <dt>
+          <label for="name">お名前</label>
+        </dt>
+        <dd>
+          <input type="text" id="name" name="name" autocomplete="given-name" />
+        </dd>
+        <dt>
+          <label for="email">メールアドレス</label>
+        </dt>
+        <dd>
+          <input type="email" id="email" name="e-mail" autocomplete="email" />
+        </dd>
+        <dt>
+          <label for="message">お問合内容</label>
+        </dt>
+        <dd>
+          <textarea id="message" name="message"></textarea>
+        </dd>
+      </dl>
+      <div class="btn">
+        <input type="submit" value="送信する" />
+      </div>
+    </section>
+  </main>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <a href=""><img class="footer-logo" src="img/footer-logo.png" alt="" /></a>
+      <p class="copyright"><small>&copy;botanical garden</small></p>
+    </div>
+  </footer>
+
+</body>
 </html>
