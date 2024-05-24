@@ -21,7 +21,6 @@ btn.addEventListener('click', function() {
 });
 
 const  navList = document.querySelectorAll('.nav > ul > li')
-console.log(navList)
 
 navList.forEach (el => {
   el.addEventListener('click', function() {

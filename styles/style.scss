@@ -565,7 +565,7 @@ input[type='submit'] {
 }
 
 
-@media screen and (max-width: 420px) {
+@media (max-width: 420px) {
   .header-container {
     align-items: flex-end;
   }
@@ -607,19 +607,19 @@ input[type='submit'] {
 
   // hamburger-menu
   .hamburger-menu {
-    width: 38px;
-    height: 28px;
+    width: 48px;
+    height: 32px;
     background: $newsBackgroundColor;
     border-radius: 5px;
     position: relative;
     z-index: 30;
     cursor: pointer;
-
+    box-shadow: 2px 2px 0px rgb(57, 57, 57);
     span {
       position: absolute;
       top: 0;
-      left: 4px;
-      width: 30px;
+      left: 3px;
+      width: 42px;
       height: 3px;
       border-radius: 5px;
       background-color: $mainColor;
@@ -628,20 +628,20 @@ input[type='submit'] {
   }
 
   .hamburger-menu span:nth-of-type(1) {
-    top: 4px;
+    top: 6px;
   }
 
   .hamburger-menu span:nth-of-type(2) {
-    top: 12px;
+    top: 14px;
   }
 
   .hamburger-menu span:nth-of-type(3) {
-    top: 20px;
+    top: 22px;
   }
 
   // active付加
   .active .hamburger-menu span:nth-of-type(1) {
-    transform: translateY(8px) rotate(-45deg);
+    transform: translateY(8px) rotate(-30deg);
   }
 
   .active .hamburger-menu span:nth-of-type(2) {
@@ -649,6 +649,6 @@ input[type='submit'] {
   }
 
   .active .hamburger-menu span:nth-of-type(3) {
-    transform: translateY(-8px) rotate(45deg);
+    transform: translateY(-8px) rotate(30deg);
   }
 }
