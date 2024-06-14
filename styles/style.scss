@@ -43,6 +43,7 @@ img {
   max-width: 960px;
   padding: 0 4%;
   margin: 0 auto;
+  max-width: 100%;
 }
 
 /* セクションmargin-bottom */
@@ -88,6 +89,26 @@ img {
     color: $fontColor02;
     transition-duration: 0.5s;
     display: inline-block;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 42%;
+      right: 16px;
+      width: 7px;
+      height: 7px;
+      border-top: 2px solid #fff;
+      border-right: 2px solid #fff;
+      transform: rotate(45deg);
+      transition: all .3s;
+    }
+
+    &:hover::after {
+      right: 11px;
+      border-top: 2px solid $mainColor;
+      border-right: 2px solid $mainColor;
+    }
 
     &:hover {
       background-color: $fontColor02;
@@ -97,6 +118,7 @@ img {
     }
   }
 }
+
 
 /* ここからheader */
 /* logo  */
@@ -161,8 +183,6 @@ h1 a img {
 
 
 
-
-
 /* sns-logo */
 .sns-logo {
   display: flex;
@@ -192,7 +212,6 @@ h1 a img {
   object-fit: cover;
   text-align: center;
 }
-
 
 /* news */
 .news-bg {
@@ -260,7 +279,7 @@ h1 a img {
 
 .about-text-container {
   max-width: 45%;
-  padding: 80px 50px 0;
+  padding: 64px 50px 0;
 
   .about-ttl {
     font-size: 1.25rem;
@@ -296,7 +315,6 @@ h1 a img {
   flex-wrap: wrap;
   justify-content: space-between;
   place-content: center;
-  max-width: 100%;
   column-gap: 24px;
 
   li {
@@ -305,11 +323,10 @@ h1 a img {
 
     a {
       transition: all 0.5s;
-    }
 
-    &:hover {
-      transition: all 0.5s;
-      opacity: 0.5;
+      &:hover {
+        opacity: 0.5;
+      }
     }
   }
 }
@@ -396,12 +413,19 @@ h1 a img {
 
   dd {
     width: 80%;
-    
+
     textarea {
       height: 16rem;
       border: none;
       margin-bottom: 32px;
     }
+  }
+}
+
+label {
+  &::after {
+    content: " ※必須";
+    font-size: 0.75rem;
   }
 }
 
@@ -448,10 +472,6 @@ input[type='submit'] {
   margin: 0 auto;
 }
 
-// .footer-container a {
-//   text-align: center;
-//   display: block;
-// }
 
 .footer-logo {
   max-width: 180px;
@@ -585,9 +605,9 @@ input[type='submit'] {
 
     ul {
       flex-direction: column;
-      align-items:flex-start;
+      align-items: flex-start;
       padding-left: 10%;
-      padding-top:30%;
+      padding-top: 30%;
 
       li {
         margin-right: 30%;
@@ -616,7 +636,7 @@ input[type='submit'] {
     z-index: 30;
     cursor: pointer;
 
-       span {
+    span {
       position: absolute;
       top: 0;
       left: 3px;
@@ -641,9 +661,10 @@ input[type='submit'] {
   }
 
   // active付加
-  .active .hamburger-menu span{
+  .active .hamburger-menu span {
     background-color: #fff;
   }
+
   .active .hamburger-menu span:nth-of-type(1) {
     transform: translateY(8px) rotate(-30deg);
   }

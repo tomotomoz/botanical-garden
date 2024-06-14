@@ -26,6 +26,7 @@ img {
   max-width: 960px;
   padding: 0 4%;
   margin: 0 auto;
+  max-width: 100%;
 }
 
 /* セクションmargin-bottom */
@@ -76,6 +77,24 @@ img {
   color: #dfe0df;
   transition-duration: 0.5s;
   display: inline-block;
+  position: relative;
+}
+.more-btn a::after {
+  content: "";
+  position: absolute;
+  top: 42%;
+  right: 16px;
+  width: 7px;
+  height: 7px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(45deg);
+  transition: all 0.3s;
+}
+.more-btn a:hover::after {
+  right: 11px;
+  border-top: 2px solid #234926;
+  border-right: 2px solid #234926;
 }
 .more-btn a:hover {
   background-color: #dfe0df;
@@ -233,7 +252,7 @@ h1 a img {
 
 .about-text-container {
   max-width: 45%;
-  padding: 80px 50px 0;
+  padding: 64px 50px 0;
 }
 .about-text-container .about-ttl {
   font-size: 1.25rem;
@@ -267,7 +286,6 @@ h1 a img {
   flex-wrap: wrap;
   justify-content: space-between;
   place-content: center;
-  max-width: 100%;
   -moz-column-gap: 24px;
        column-gap: 24px;
 }
@@ -278,8 +296,7 @@ h1 a img {
 .works-img-container li a {
   transition: all 0.5s;
 }
-.works-img-container li:hover {
-  transition: all 0.5s;
+.works-img-container li a:hover {
   opacity: 0.5;
 }
 
@@ -364,6 +381,11 @@ h1 a img {
   height: 16rem;
   border: none;
   margin-bottom: 32px;
+}
+
+label::after {
+  content: " ※必須";
+  font-size: 0.75rem;
 }
 
 input[type=text],

@@ -1,6 +1,7 @@
 'use strict'
 
-const targets = document.getElementsByClassName('fade');
+// fade
+const targets = document.querySelectorAll('.fade');
 for(let i = targets.length; i--;){
 let observer = new IntersectionObserver((entries, observer) => {
   for(let j = entries.length; j--;){
@@ -13,6 +14,7 @@ let observer = new IntersectionObserver((entries, observer) => {
 observer.observe(targets[i]);
 }
 
+// hamburger
 const nav = document.querySelector('.nav-area')
 const btn = document.getElementById('btn')
 
@@ -26,4 +28,17 @@ navList.forEach (el => {
   el.addEventListener('click', function() {
     nav.classList.remove('active')
   });
+});
+
+
+// submitBn
+const submitBtn = document.getElementById('submitBtn');
+console.log(submitBtn)
+
+submitBtn.addEventListener('click', function(){
+  this.setAttribute('disabled', true);
+  this.style.color = 'black';
+  this.style.backgroundColor = 'white';
+  this.style.outline = '1px solid black';
+  this.setAttribute('value', '送信しました')
 });

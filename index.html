@@ -141,30 +141,35 @@
             <p>&yen;2,000~&yen;50,000</p>
           </a>
         </li>
+
         <li>
           <a href="#" class="fade"><img src="img/works2.jpg" alt="" />
             <p>アレンジメントフラワー</p>
             <p>&yen;2,000~&yen;50,000</p>
           </a>
         </li>
+
         <li>
           <a href="#" class="fade"><img src="img/works3.jpg" alt="" />
             <p>バラ100本!プロポーズ用の花束</p>
             <p>&yen;60,000~</p>
           </a>
         </li>
+
         <li>
           <a href="#" class="fade"><img src="img/works4.jpg" alt="" />
             <p>スタンド花</p>
             <p>&yen;20,000~</p>
           </a>
         </li>
+
         <li>
           <a href="#" class="fade"><img src="img/works5-.jpg" alt="" />
             <p>お供え・お悔やみの献花</p>
             <p>&yen;1,000~</p>
           </a>
         </li>
+
         <li>
           <a href="#" class="fade"><img src="img/works6.jpg" alt="" />
             <p>多肉植物の寄せ植え</p>
@@ -229,23 +234,23 @@
           <label for="name">お名前</label>
         </dt>
         <dd>
-          <input type="text" id="name" name="name" autocomplete="given-name" />
+          <input type="text" id="name" name="name" autocomplete="given-name" required>
         </dd>
         <dt>
           <label for="email">メールアドレス</label>
         </dt>
         <dd>
-          <input type="email" id="email" name="e-mail" autocomplete="email" />
+          <input type="email" id="email" name="e-mail" autocomplete="email" required>
         </dd>
         <dt>
           <label for="message">お問合内容</label>
         </dt>
         <dd>
-          <textarea id="message" name="message"></textarea>
+          <textarea id="message" name="message" required></textarea>
         </dd>
       </dl>
       <div class="btn">
-        <input type="submit" value="送信する" />
+        <input id="submitBtn" type="submit" value="送信する">
       </div>
     </section>
   </main>
@@ -259,4 +264,5 @@
   </footer>
 
 </body>
+
 </html>
