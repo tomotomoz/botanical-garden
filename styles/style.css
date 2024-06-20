@@ -26,7 +26,6 @@ img {
   max-width: 960px;
   padding: 0 4%;
   margin: 0 auto;
-  max-width: 100%;
 }
 
 /* セクションmargin-bottom */
@@ -285,13 +284,16 @@ h1 a img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  place-content: center;
-  -moz-column-gap: 24px;
-       column-gap: 24px;
 }
 .works-img-container li {
   margin-bottom: 60px;
   text-align: center;
+  width: 33.3333333333%;
+}
+.works-img-container li img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
 }
 .works-img-container li a {
   transition: all 0.5s;

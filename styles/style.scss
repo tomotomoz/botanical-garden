@@ -43,7 +43,6 @@ img {
   max-width: 960px;
   padding: 0 4%;
   margin: 0 auto;
-  max-width: 100%;
 }
 
 /* セクションmargin-bottom */
@@ -314,13 +313,15 @@ h1 a img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  place-content: center;
-  column-gap: 24px;
-
+  
   li {
     margin-bottom: 60px;
     text-align: center;
-
+    width: calc(100%/3);
+    img{
+      object-fit: cover;
+      width: 100%;
+    }
     a {
       transition: all 0.5s;
 
