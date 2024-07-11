@@ -121,7 +121,7 @@ img {
 
 /* ここからheader */
 /* logo  */
-h1 a img {
+.logo {
   width: 320px;
   line-height: 1;
 }
@@ -187,13 +187,14 @@ h1 a img {
   display: flex;
   flex-direction: column;
   row-gap: 12px;
+  // margin-right: 12px;
   position: fixed;
   right: 30px;
   top: 150px;
-  filter: drop-shadow(0 0 0.1rem rgb(254, 255, 253));
+  filter: drop-shadow(0 0 0.05rem rgb(254, 255, 253));
 
-  a {
-    width: 40px;
+  img {
+    width: 30px;
     display: inline-block;
 
     &:hover {
@@ -586,11 +587,14 @@ input[type='submit'] {
 }
 
 
-@media (max-width: 420px) {
+@media (max-width: 428px) {
   .header-container {
     align-items: flex-end;
   }
-
+  .logo {
+    width: 220px;
+    }
+  
   .nav-area .nav {
     position: fixed;
     top: 0;
@@ -629,6 +633,11 @@ input[type='submit'] {
     transition: all 0.5s;
   }
 
+  // sns-logo
+  .sns-logo {
+    margin-right: 12px;
+  }
+
   // hamburger-menu
   .hamburger-menu {
     width: 48px;
@@ -636,7 +645,7 @@ input[type='submit'] {
     position: relative;
     z-index: 30;
     cursor: pointer;
-
+    
     span {
       position: absolute;
       top: 0;

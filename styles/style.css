@@ -104,7 +104,7 @@ img {
 
 /* ここからheader */
 /* logo  */
-h1 a img {
+.logo {
   width: 320px;
   line-height: 1;
 }
@@ -167,13 +167,13 @@ h1 a img {
   position: fixed;
   right: 30px;
   top: 150px;
-  filter: drop-shadow(0 0 0.1rem rgb(254, 255, 253));
+  filter: drop-shadow(0 0 0.05rem rgb(254, 255, 253));
 }
-.sns-logo a {
-  width: 40px;
+.sns-logo img {
+  width: 30px;
   display: inline-block;
 }
-.sns-logo a:hover {
+.sns-logo img:hover {
   transition: all 0.5s;
   opacity: 0.7;
 }
@@ -522,9 +522,12 @@ input[type=submit]:hover {
     width: 100%;
   }
 }
-@media (max-width: 420px) {
+@media (max-width: 428px) {
   .header-container {
     align-items: flex-end;
+  }
+  .logo {
+    width: 220px;
   }
   .nav-area .nav {
     position: fixed;
@@ -558,6 +561,9 @@ input[type=submit]:hover {
     visibility: visible;
     transform: translateX(0);
     transition: all 0.5s;
+  }
+  .sns-logo {
+    margin-right: 12px;
   }
   .hamburger-menu {
     width: 48px;
