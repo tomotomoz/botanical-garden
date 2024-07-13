@@ -31,14 +31,14 @@ navList.forEach (el => {
 });
 
 
-// submitBn
-const submitBtn = document.getElementById('submitBtn');
-console.log(submitBtn)
+// // submitBn
+// const submitBtn = document.getElementById('submitBtn');
+// console.log(submitBtn)
 
-submitBtn.addEventListener('click', function(){
-  this.setAttribute('disabled', true);
-  this.style.color = 'black';
-  this.style.backgroundColor = 'white';
-  this.style.outline = '1px solid black';
-  this.setAttribute('value', '送信しました')
-});
+// submitBtn.addEventListener('click', function(){
+//   this.setAttribute('disabled', true);
+//   this.style.color = 'black';
+//   this.style.backgroundColor = 'white';
+//   this.style.outline = '1px solid black';
+//   this.setAttribute('value', '送信しました')
+// });
